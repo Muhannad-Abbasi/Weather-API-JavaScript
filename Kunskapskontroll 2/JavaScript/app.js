@@ -38,19 +38,39 @@ weatherForm.addEventListener('submit',
                 img.src = iconUrl;
 
 
-
                 function tempChange(){
-                    
+                    if(data.main.temp <= -1){
+                        let body = document.querySelector('body');
+                        body.style.backgroundImage = 'url(Img/snow.jpg)';
 
-                    if(data.main.temp <= 11){
+                        let tempCh = document.querySelector('#tempCh')
+                        tempCh.innerHTML = 'its a very cold day'
+                        tempCh.style.color = 'white';
+                        tempCh.style.backgroundColor = 'blue';
+
+                    }else if(data.main.temp == 0 || data.main.temp <= 17){
+                        let body = document.querySelector('body');
+                        body.style.backgroundImage = 'url(Img/rain.jpg)';
+
                         let tempCh = document.querySelector('#tempCh')
                         tempCh.innerHTML = 'its a cold day'
                         tempCh.style.color = 'white';
                         tempCh.style.backgroundColor = 'blue';
-                        // console.log('its a cold day')
-                    }else if(data.main.temp >= 20){
+                        
+                    }else if(data.main.temp >= 18 && data.main.temp <= 27){
+                        let body = document.querySelector('body');
+                        body.style.backgroundImage = 'url(Img/summer.jpg)';
+
                         let tempCh = document.querySelector('#tempCh')
-                        tempCh.innerHTML = 'its a hot day'
+                        tempCh.innerHTML = 'its a beautiful day'
+                        tempCh.style.color = 'white';
+                        tempCh.style.backgroundColor = 'green';
+                    }else if(data.main.temp >= 28){
+                        let body = document.querySelector('body');
+                        body.style.backgroundImage = 'url(Img/hot-summer.jpg)';
+
+                        let tempCh = document.querySelector('#tempCh')
+                        tempCh.innerHTML = 'its a very hot day'
                         tempCh.style.color = 'white';
                         tempCh.style.backgroundColor = 'red';
                     }
