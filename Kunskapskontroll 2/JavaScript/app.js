@@ -11,7 +11,6 @@ weatherForm.addEventListener('submit',
 
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${stadensNamn}&units=metric&appid=${apiKey}`;
 
-
         fetch(url).then(
             function(response){
                 return response.json();
@@ -20,6 +19,7 @@ weatherForm.addEventListener('submit',
             function(data){
                 // console.log(data);
                 let pWeatherDescription = document.querySelector('#pWeatherDescription');
+
                 pWeatherDescription.innerHTML = `Description: ${data.weather[0].description}`;
 
                 let pTemp = document.querySelector('#pTemp');
@@ -30,6 +30,13 @@ weatherForm.addEventListener('submit',
 
                 let pHumidity = document.querySelector('#pHumidity')
                 pHumidity.innerHTML = `Humidity is: ${data.main.humidity}`;
+
+                let img = document.querySelector('#hi')
+                let wIcon = data.weather[0].icon;
+                const iconUrl = `http://openweathermap.org/img/w/${wIcon}.png`;
+                console.log(iconUrl)
+                img.src = iconUrl;
+
 
 
                 function tempChange(){
@@ -54,6 +61,7 @@ weatherForm.addEventListener('submit',
             function (error){
                 let body = document.querySelector('form');
                 body.insertAdjacentHTML('afterend', `<p>Oops something went wrong! ${error}</p>`)
+                console.log(error)
             }
         )
     }
