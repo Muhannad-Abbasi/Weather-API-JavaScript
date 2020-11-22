@@ -4,25 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/style.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/976d5d14ad.js" crossorigin="anonymous"></script>
+    <title>Weather.now</title>
 </head>
 <body>
-    
-    <div class="container">
 
-        <h1>Weather.nu</h1>
+    <div class="main-nav">
+        <div class="left">
+            <ul class="menu-left">
+                <li class="menu-left-item allLi"><a href="#">Latest Updates</a></li>
+                <li class="menu-left-item allLi"><a href="#">Services</a></li>
+            </ul>
+        </div>
+        <div class="middle">
+            <img src="Img/clipart3066442.png" class="logo"  alt="Weather-logo">
+            <h2 class="title">Weather.now</h2>
+        </div>
+        <div class="right">
+            <ul class="menu-right">
+                <li class="menu-right-item allLi"><a href="#"><i class="far fa-bell"></i></a></li>
+                <li class="menu-right-item allLi"><a href="#"><i class="far fa-envelope"></i></a></li>
+                <li class="menu-right-item allLi"><a href="#"><i class="far fa-user"></i></a></li>
+                <li class="menu-right-item allLi"><a href="#">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <form id='weather-form'>
-            <label for='StadensNamn'>Ange en stad</label>
-            <input type='text' id="stadensNamn" placeholder = 'Ex: Helsingborg'>
-            <button type='submit' id="sök-button">Sök!</button>
-        </form>
-        <p id="pWeatherDescription"></p>
-        <p id="pTemp"></p>
-        <img src="" alt="" id="wIcon">
-        <p id="tempCh"></p>
-        <p id="pWind"></p>
-        <p id="pHumidity"></p>
+    <div id="container-b">
+
+        <div class="user-interface">
+
+            <form id='weather-form'>
+                <label for='StadensNamn'>Search City</label>
+                <input type='text' id="stadensNamn" placeholder = 'Ex: Sweden'>
+                <button type='submit' id="sök-button"><i class="fas fa-search"></i></button>
+            </form>
+
+        </div>
+
+        <div class="user-experience">
+            <p id="pWeatherDescription"></p>
+            <p id="pTemp"></p>
+            <img src="" alt="" id="wIcon">
+            <p id="tempCh"></p>
+            <p id="pWind"></p>
+            <p id="pHumidity"></p>
+        </div>
+
     </div>
 
     <script src="JavaScript/app.js"></script>

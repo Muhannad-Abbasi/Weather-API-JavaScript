@@ -1,12 +1,126 @@
-body{
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container{
+:root{
+    --shadowbox-color: rgb(204, 204, 204);
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+.main-nav{
+    width: 100%;
+    height: 71px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #24292e;
+    /* box-shadow: 2px 3px 8px  var(--shadowbox-color), 0px 3px 18px var(--shadowbox-color); */
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.allLi{
+    display: flex;
+}
+
+.menu-left-item{
+    padding-left: 18px;
+}
+
+.menu-right-item{
+    padding-right: 18px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:white;
+}
+
+a:hover {
+    color: #374d5f;
+    transition: all .3s ease;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo{
+    width: 2.8rem;
+    padding-right: 0.5rem;
+}
+
+.title{
+    font-family: 'Barlow', sans-serif;
+    color: white;
+}
+
+#container-b{
     padding: 40px;
-    max-width: 800 px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+
+/* #wIcon{
+    padding-left: 4rem;
+} */
+
+p{
+    padding: .5rem;
+    font-weight: bold;
+}
+
+.user-interface{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 295px;
+    height: 10rem;
+    background-color: rgb(199, 235, 255);
+    border: 3px solid #24292e;
+    border-radius: 5px;
+    box-shadow: 2px 0px 8px var(--shadowbox-color);
+    padding: 25px 5px;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+}
+
+input, button{
+    padding: 5px 6px;
+    border: 0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.651);
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
 }
