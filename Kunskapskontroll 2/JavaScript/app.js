@@ -138,28 +138,3 @@ weatherForm.addEventListener('submit',
         )
     }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-// let cityName = 'Helsingborg';
-
-// const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
-
-// fetch(url).then(
-//     function(response){
-//         return response.json();
-//     }
-// ).then(
-//     function(data){
-//         console.log(data.wind.speed)
-//     }
-// )
