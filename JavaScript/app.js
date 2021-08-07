@@ -3,7 +3,7 @@ let containerB = document.querySelector('#container-b');
 containerB.style.backgroundImage = 'url(Img/main-background.jpg)';
 containerB.style.backgroundSize = 'cover';
 containerB.style.backgroundRepeat = 'no-repeat';
-containerB.style.height = '89vh'
+containerB.style.height = '1226px'
 
 // Skapa variabel till min apiKey
 const apiKey = 'a58f83c4989c4227461d5a79c362a60b';
